@@ -23,7 +23,6 @@ namespace Bastien {
         
         private void Awake() {
             _portalCollider = GetComponentInChildren<PortalCollider>();
-
             _playerCamera = Camera.main;            
             _portalCollider = GetComponentInChildren<PortalCollider>();
             _portalCamera = GetComponentInChildren<Camera>();
@@ -86,7 +85,7 @@ namespace Bastien {
                  _destination.transform.position.z + playerEntryOffset.z);
 
              //Make it so that the player keeps facing the same way despite rotation of the room
-             player.transform.rotation = _destination.transform.rotation * player.transform.localRotation;
+             player.transform.rotation = Quaternion.Euler(PortalRotationDelta);
              
              //player.transform.rotation += _destination.transform.rotation;
              Debug.Log($"WPOS: {player.transform.position} -- WROT: {player.transform.rotation.eulerAngles}\n" +
@@ -100,7 +99,6 @@ namespace Bastien {
         }
 
         private void OnGUI() {
-            
             Debug.DrawLine(transform.position, _playerCamera.transform.position);
             if(_destination)
                 Debug.DrawLine(_destination.transform.position, _destination._portalCamera.transform.position);
