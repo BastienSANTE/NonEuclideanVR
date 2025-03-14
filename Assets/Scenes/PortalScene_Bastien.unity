@@ -2946,6 +2946,10 @@ PrefabInstance:
       propertyPath: m_RenderShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3639148551234328392, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
+      propertyPath: m_CurrentTrackingState
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 6566632252744423738, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
       propertyPath: m_CurrentTrackingState
       value: -1

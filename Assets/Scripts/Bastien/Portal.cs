@@ -66,6 +66,7 @@ namespace Bastien {
             
             //Render texture size varies on resolution. Using RHalf for memory considerations.
             _portalRenderTexture = new RenderTexture(Screen.width, Screen.height, 24);
+            _portalRenderTexture.vrUsage = VRTextureUsage.TwoEyes;
             _portalRenderTexture.Create();
             //AssetDatabase.CreateAsset(_portalRenderTexture, "Assets/Textures/TEMP/" + $"{this.GetInstanceID()}.rendertexture");
 
